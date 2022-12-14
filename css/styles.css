@@ -23,6 +23,12 @@ header {
   text-align: center;
 }
 
+#contact-info {
+  padding-left: 0;
+  margin-bottom: -0.5rem;
+  margin-top: -0.25rem;
+}
+
 #about {
   text-align: left;
 }
@@ -42,4 +48,35 @@ ul {
 
 p {
   padding-bottom: 1rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 799px) {
+  #contact {
+    padding-bottom: 0.75rem;
+  }
+  
+  p {
+    padding: 0 1rem;
+  }
+
+  .attributes {
+    padding: 0.1rem 1rem;
+  }
+
+  ul {
+    padding-bottom: 0.1rem;
+  }
+
+  .sites {
+    margin-top: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+  * {
+    margin: 0 auto;
+    max-width: 800px;
+  }
 }
