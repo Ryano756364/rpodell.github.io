@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="fade">
       <h1 id="name">Ryan O'Dell</h1>
       <div id="contact">
         <ul id="contact-info">
@@ -23,7 +23,7 @@
       </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade">
       <p>Highly motivated AVP of Lending at Lower.com, passionate about using technology to lead consumers through the 
         challenging and exciting journeys of navigating various financial roadmaps. Desired career path would involve 
         building software components, offering insights for areas of improvement, and building up tests around code 
@@ -31,7 +31,7 @@
         affinity for programming and as such, will be an asset to this team and company.</p>
     </section>
 
-    <section class="attributes">
+    <section class="attributes fade">
       <h2 class="attribue-title">Technical Experience</h2>
         <div class="title-heading">Loan PreQualifying Software</div>
           <p>Built with Java language, DAO methodology,  and MySQL relational database instruction, 
@@ -44,7 +44,7 @@
             behind it features front end style, html, Vue.js, components, and methods.</p>
     </section>
 
-    <section class="attributes">
+    <section class="attributes fade">
       <h2 class="attribue-title">Technical Skills</h2>
         <ul>
           <li class="title-heading">High Exposure</li>
@@ -74,7 +74,7 @@
         </ul>
     </section>
 
-    <section class="attributes">
+    <section class="attributes fade">
       <h2 class="attribue-title">Education</h2>
         <div class="title-heading">Tech Elevator</div>
           <p>Graduated a 30 week programming course with a focus on developing dynamic,  web-based software 
@@ -83,7 +83,7 @@
           <p>Bachelor of Science in Digital Sciences / Computer Sciences. </p>
     </section>
 
-    <section class="attributes">
+    <section class="attributes fade">
       <h2 class="attribue-title">Professional Experience</h2>
         <div class="title-heading">Lower.com</div>
         <div class="title-subheading">Assistant Vice President of Sales</div>
@@ -94,5 +94,27 @@
           <p>Involved different departments in the deployment of software.
              Developed personalized tech solutions to further my career.</p>
     </section>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', fade);
+  
+      function fade(){
+        var fades = document.querySelectorAll('.fade');
+  
+        for(var i = 0; i < fades.length; i++){
+  
+          var windowheight = window.innerHeight;
+          var fadetop = fades[i].getBoundingClientRect().top;
+          var fadepoint = 100;
+  
+          if(fadetop < windowheight - fadepoint){
+            fades[i].classList.add('active');
+          }
+          else{
+            fades[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
 </body>
 </html>
