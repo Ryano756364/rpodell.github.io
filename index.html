@@ -7,20 +7,21 @@
   <title>Ryan O'Dell</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
     <header>
-      <h1 id="name">Ryan O'Dell</h1>
-      <div id="contact">
-        <ul id="contact-info">
-          <li class="contact-item">Columbus, OH</li>
-          <li class="contact-item">Email in resume</li>
-          <li class="contact-item">Phone in resume</li>
-        </ul>
-        <div class="sites">linkedin.com/in/ryan-odell-java-developer</div>
-        <div class="sites">github.com/Ryano756364/Projects</div>
-      </div>
+        <h1 id="name">Ryan O'Dell</h1>
+        <div id="contact">
+          <ul id="contact-info">
+            <li class="contact-item">Columbus, OH</li>
+            <li class="contact-item">Email in resume</li>
+            <li class="contact-item">Phone in resume</li>
+          </ul>
+          <div class="sites">linkedin.com/in/ryan-odell-java-developer</div>
+          <div class="sites">github.com/Ryano756364/Projects</div>
+        </div>
     </header>
 
     <section id="about" class="fade">
@@ -116,9 +117,17 @@
           }
         }
       }
+    </script>
 
+    <script>
+      ScrollReveal({ 
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400 
+      });
 
-
-      </script>
+      ScrollReveal().reveal('header', { delay: 200, origin: 'left' });
+    </script>
 </body>
 </html>
